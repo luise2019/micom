@@ -1,44 +1,48 @@
 <template>
-  <div class="container">
-    <div class="topbar-wrapper">
-      <ul class="TopBar">
-        <li class="ser-items"><a href="">小米商城</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">MIUI</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">IoT</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">云服务</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">天星数科</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">有品</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">小爱开放平台</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">企业团购</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">资质证照</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">协议规则</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">下载app</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">智能生活</a></li>
-        <li class="spacer">|</li>
-        <li class="ser-items"><a href="">Select Location</a></li>
-      </ul>
-    <div class="shop-cart">
-      <span class="fa fa-shopping-cart"></span>
-      <a href="">购物车<span>(0)</span></a>
-    </div>
-    <ul class="personal-list">
-        <li class="personal-items"><a href="">登入</a></li>
-        <li class="spacer">|</li>
-        <li class="personal-items"><a href="">注册</a></li>
-        <li class="spacer">|</li>
-        <li class="personal-items"><a href="">消息通知</a></li>
-      </ul>
+  <div class="header--container">
+    <div class="topbar-background">
+      <div class="topbar-wrapper">
+        <ul class="topbar--left">
+          <li class="ser-items"><a href="">小米商城</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">MIUI</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">IoT</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">云服务</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">天星数科</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">有品</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">小爱开放平台</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">企业团购</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">资质证照</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">协议规则</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">下载app</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">智能生活</a></li>
+          <li class="spacer">|</li>
+          <li class="ser-items"><a href="">Select Location</a></li>
+        </ul>
+        <div class="topbar--right">
+          <div class="shop-cart">
+            <span class="fa fa-shopping-cart"></span>
+            <a href="">购物车<span>(0)</span></a>
+          </div>
+          <ul class="personal-list">
+            <li class="personal-items"><a href="">登入</a></li>
+            <li class="spacer">|</li>
+            <li class="personal-items"><a href="">注册</a></li>
+            <li class="spacer">|</li>
+            <li class="personal-items"><a href="">消息通知</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="header-wrapper">
       <a href="" class="logo"><img src="../assets/logo-mi2.png" alt=""></a>
@@ -66,45 +70,55 @@
 export default {
   name: 'Header',
   props: {
-    
+
   }
 }
 </script>
 
 <style>
-.container{
+.header--container{
   height: 140px;
   top:0px;
   left:0px;
-
 }
-.topbar-wrapper{
-  min-width: 1226px;
+
+.topbar-background {
   height: 40px;
   line-height: 40px;
   background-color: #333;
   font-size: 12px;
   color: #b0b0b0;
+}
+
+.topbar-background a {
+  color: #b0b0b0;
+}
+
+.topbar-wrapper {
+  width: 1226px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: space-between;
 }
+
+.topbar--left {
+  height:40px;
+}
+
 .ser-items,.spacer,.personal-items,.logo,.nav-items {
   float: left;
 }
 .shop-cart,.personal-list,.searchbox {
   float: right;
 }
-.TopBar{
-  height:40px;
-}
-.topbar-wrapper a{
-  color: #b0b0b0;
-}
+
 .shop-cart {
   width: 120px;
   height: 40px;
   text-align: center;
   margin-left: 15px;
+  background-color: #424242;
 }
 .header-wrapper{
   width: 100%;
