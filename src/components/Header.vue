@@ -3,26 +3,10 @@
     <div class="topbar-background">
       <div class="topbar-wrapper">
         <ul class="topbar--left">
-          <li class="ser-items"><a href="">小米商城</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">MIUI</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">IoT</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">云服务</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">天星数科</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">有品</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">小爱开放平台</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">企业团购</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">资质证照</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
-          <li class="ser-items"><a href="">协议规则</a></li>
-          <li class="spacer">&nbsp;|&nbsp;</li>
+          <li v-for="item in navBarList" :key="item" class="ser-items">
+            <a :href="item.link">{{item.label}}</a>
+            <span class="spacer">&nbsp;|&nbsp;</span>
+          </li>
           <li class="ser-items download"><a href="">下载app<div class="box1"></div><span class="qrcode"><img src="../assets/download.png" alt="" >小米商城APP</span></a></li>
           <li class="spacer">&nbsp;|&nbsp;</li>
           <li class="ser-items"><a href="">智能生活</a></li>
@@ -39,12 +23,11 @@
           </ul>
           <div class="shop-cart">
               <a href=""><span class="fa fa-shopping-cart"></span>
-             &nbsp;购物车<span>(0)</span></a>
-             <div class="cart-menu">
-               <div class="menu-content"></div>
-             </div>
+              &nbsp;购物车<span>(0)</span></a>
+              <div class="cart-menu">
+                <div class="menu-content"></div>
+              </div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -64,12 +47,12 @@
           <li class="nav-items"><a href="http://" >服务</a></li>
           <li class="nav-items"><a href="http://" >社区</a></li>
         </ul>
-        
+
       <div class="header-search">
         <div class="input"></div>
         <span class="fa fa-search"></span>
       </div>
-      
+
     </div>
   </div>
 </template>
@@ -78,7 +61,22 @@
 export default {
   name: 'Header',
   props: {
-
+  },
+  data () {
+    return {
+      navBarList: [
+        {label: '小米商城', link: '#'},
+        {label: 'MIUI', link: '#'},
+        {label: 'IoT', link: '#'},
+        {label: '云服务', link: '#'},
+        {label: '天星数科', link: '#'},
+        {label: '有品', link: '#'},
+        {label: '小爱开放平台', link: '#'},
+        {label: '企业团购', link: '#'},
+        {label: '资质证照', link: '#'},
+        {label: '协议规则', link: '#'},
+      ]
+    }
   }
 }
 </script>
@@ -120,6 +118,7 @@ export default {
 }
 .topbar--left {
   height:40px;
+  display: flex;
 }
 /* 设置下拉菜单 */
 .topbar--left .download,.topbar--right .shop-cart{
@@ -140,7 +139,7 @@ export default {
 }
 /* qrcode的下拉菜单 */
 .download .qrcode{
-  display: none; 
+  display: none;
   width: 124px;
   height:148px;
   font-size: 14px;
@@ -154,7 +153,7 @@ export default {
   top: 40px;
   left:-39px;
   /* 对菜单添加动画效果 */
-  transition: height .3s; 
+  transition: height .3s;
   /* 添加z系数 */
   z-index: 10;
 }
@@ -195,8 +194,11 @@ export default {
 }
 
 /* 之后优化下只用flex实现布局 */
-.ser-items,.spacer,.personal-items,.nav-items{
+.spacer,.personal-items,.nav-items{
   float: left;
+}
+.ser-items {
+  display: flex;
 }
 .shop-cart,.header-search {
   float: right;
@@ -216,7 +218,7 @@ export default {
   display: flex;
   justify-content: center;
   }
-  
+
 .logo{
   width: 62px;
   height: 56px;
@@ -253,7 +255,7 @@ export default {
   width: 296px;
   display: flex;
   align-items: center;
-  
+
 }
 .header-search .input{
   width: 80%;

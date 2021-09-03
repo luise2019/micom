@@ -1,61 +1,63 @@
 <template>
   <div class="home--container">
-    <div class="main-bar">
-      <div class="main-banner">
-        <a href="http://"><img src="../assets/main-banner.jpg" alt="" srcset="" /></a>
+    <div>
+      <div class="main-bar">
+        <div class="main-banner">
+          <a href="http://"><img src="../assets/main-banner.jpg" alt="" srcset="" /></a>
+        </div>
+        <div class="aside-bar">
+          <ul class="aside-list">
+            <li class="side-item">
+              <a href="http://">手机<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">电视<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">笔记本&nbsp;平板<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">家电<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">出行&nbsp;穿戴<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">智能&nbsp;路由器<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">电源&nbsp;配件<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">健康&nbsp;儿童<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">耳机&nbsp;音箱<span class="fa fa-angle-right"></span></a>
+            </li>
+            <li class="side-item">
+              <a href="http://">生活&nbsp;箱包<span class="fa fa-angle-right"></span></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="aside-bar">
-        <ul class="aside-list">
-          <li class="side-item">
-            <a href="http://">手机<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">电视<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">笔记本&nbsp;平板<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">家电<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">出行&nbsp;穿戴<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">智能&nbsp;路由器<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">电源&nbsp;配件<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">健康&nbsp;儿童<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">耳机&nbsp;音箱<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">生活&nbsp;箱包<span class="fa fa-angle-right"></span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="shortcut">
-      <div class="short-ser">
-        <ul class="ser-list">
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-        </ul>
-      </div>
-      <div class="photo">
-        <ul class="photo-list">
-          <li class="photo-item"><img src="../assets/9f18ac756fa2cedb16ea429b9c0001af.png" alt="" /></li>
-          <li class="photo-item"><img src="../assets/b30177d629bfbe2fb42251c1b8538f7b.jpg" alt="" /></li>
-          <li class="photo-item"><img src="../assets/d8a6d6d37904e22c72130e3e4ec79b41.jpg" alt="" /></li>
-        </ul>
+      <div class="shortcut">
+        <div class="short-ser">
+          <ul class="ser-list">
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+            <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+          </ul>
+        </div>
+        <div class="photo">
+          <ul class="photo-list">
+            <li class="photo-item"><img src="../assets/9f18ac756fa2cedb16ea429b9c0001af.png" alt="" /></li>
+            <li class="photo-item"><img src="../assets/b30177d629bfbe2fb42251c1b8538f7b.jpg" alt="" /></li>
+            <li class="photo-item"><img src="../assets/d8a6d6d37904e22c72130e3e4ec79b41.jpg" alt="" /></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -73,7 +75,8 @@ export default {
   height: 635px;
   padding-right: auto;
   padding-left: auto;
-  
+  display: flex;
+  justify-content: center;
 }
 /* 主图容器设置 */
 .main-bar{
@@ -103,7 +106,7 @@ export default {
   flex-flow: column wrap;
   justify-content:center;
   align-content: center;
-  
+
 }
 /* 设置导航类目的尺寸和文字效果 */
 .side-item{
@@ -138,7 +141,7 @@ export default {
   margin-top:5px;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 /* 设置short-ser的尺寸和背景 */
 .short-ser{
@@ -177,8 +180,8 @@ export default {
 
 /* 设置photo的尺寸和背景 */
 .photo-list{
- display: flex;
- justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 /* photo-item的尺寸 */
 .photo-item{
