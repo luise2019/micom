@@ -253,6 +253,7 @@ export default {
   width: 296px;
   display: flex;
   align-items: center;
+  
 }
 .header-search .input{
   width: 80%;
@@ -262,10 +263,10 @@ export default {
 }
 .header-search span{
   width: 20%;
-  height: 43px;
+  height: 48px;
   font-size: 30px;
   border:1px #b0b0b0 solid;
-  padding-top: 5px;
+  padding: 6px;
 }
 
 .spacer{
