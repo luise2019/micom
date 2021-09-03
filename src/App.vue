@@ -23,7 +23,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-
+  box-sizing: border-box;
 }
 *{
   margin: 0px;
