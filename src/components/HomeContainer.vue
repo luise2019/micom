@@ -1,5 +1,6 @@
 <template>
   <div class="home--container">
+    <div class="main-container">
     <div class="main-bar">
       <div class="main-banner">
         <a href="http://"><img src="../assets/main-banner.jpg" alt="" srcset="" /></a>
@@ -42,12 +43,12 @@
     <div class="shortcut">
       <div class="short-ser">
         <ul class="ser-list">
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>保障服务</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>小米秒杀</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>企业团购</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>F码通道</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>米粉卡</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>以旧换新</a></li>
+          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>话费充值</a></li>
         </ul>
       </div>
       <div class="photo">
@@ -57,6 +58,14 @@
           <li class="photo-item"><img src="../assets/d8a6d6d37904e22c72130e3e4ec79b41.jpg" alt="" /></li>
         </ul>
       </div>
+    </div>
+    <div class="back-top">
+      <span class="fa fa-mobile"></span>
+      <span class="fa fa-user-o"></span>
+      <span class="fa fa-wrench"></span>
+      <span class="fa fa-headphones"></span>
+      <span class="fa fa-shopping-cart"></span>
+    </div>
     </div>
   </div>
 </template>
@@ -71,15 +80,19 @@ export default {
 <style >
 .home--container {
   height: 635px;
-  padding-right: auto;
-  padding-left: auto;
   
+}
+.main-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* 主图容器设置 */
 .main-bar{
   width: 1226px;
   height: 460px;
   position: relative;
+  flex: 1;
 }
 .main-banner img{
   width: 100%;
@@ -97,12 +110,12 @@ export default {
   left: 0px;
   opacity: .7;
 }
-/* 设置侧导航的flex布局 */
+/* 设置侧导航的flex布局，垂直排列*/
 .aside-list{
   display:flex;
   flex-flow: column wrap;
-  justify-content:center;
-  align-content: center;
+  /* justify-content:center;
+  align-content: center; */
   
 }
 /* 设置导航类目的尺寸和文字效果 */
@@ -111,14 +124,15 @@ export default {
   height: 42px;
   line-height: 42px;
   text-align: left;
-  flex: 1 1 auto;
-  padding-left: 30px;
+  flex: 1;
+  
 }
 /* 设置导航链接的效果 */
 .aside-list .side-item a {
+  display: inline-block;
   width: 100%;
   color: #ffffff;
-  display: inline-block;
+  padding-left: 30px;
 }
 /* 设置箭头浮动和居中，调整位置 */
 .side-item a span{
@@ -135,7 +149,7 @@ export default {
 .shortcut{
   width: 100%;
   display: flex;
-  margin-top:5px;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   
@@ -146,33 +160,34 @@ export default {
   height: 170px;
   background-color: #5f5750;
   font-size: 12px;
-  color: #ffffff;
+  color: #cfccca;
 }
 /* 设置ser-list布局*/
 .ser-list{
   display: flex;
   flex-flow: row wrap;
 }
-/* 设置list-item的尺寸和文字效果 */
+/* 设置list-item的尺寸和文字效果 
+边框样式与实际有差，样式用绝对定位，伪元素插入每个li处理*/
 .list-item{
   flex: 1 1 auto;
   width: 78px;
   height: 85px;
-  line-height: 85px;
-  text-align: center;
-  border: 1px solid white;
+  border: 1px solid #cfccca;
 }
-/* 设置list-item的效果 */
+/* 设置list-item内a元素的效果*/
 .list-item  a {
   width: 100%;
-  padding-top: 18px;
-  color: #ffffff;
-  display: inline-block;
+  color: #cfccca;
   opacity: .7;
 }
-/* 设置图标效果 */
+/* 设置图标效果 ,水平居中,和文字拉开距离*/
 .list-item span{
-  font-size: 25px;
+  display: block;
+  font-size: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 /* 设置photo的尺寸和背景 */
@@ -185,8 +200,33 @@ export default {
   width:321px;
   height: 170px;
   margin-left:10px;
+  overflow: hidden;
 }
+/* 设置图片宽度继承父元素宽度，但画面有超出，父元素设置overflow解决 */
 .photo-item img{
   width: 100%;
 }
+
+/*设置backtop样式 ,固定定位，窗口的右侧*/
+.back-top{
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+  /*以下实现置紧贴容器的backtop
+  right:50%;
+  margin-right: -639px; */
+  border-bottom-color: rgba(105,101,101,.6);
+}
+/* 设置backtop 图标样式 */
+.back-top span{
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  padding-top:10px;
+  margin: 0 auto 8px;
+}
+
 </style>
