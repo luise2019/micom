@@ -152,7 +152,7 @@ export default {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 /* 设置short-ser的尺寸和背景 */
 .short-ser{
@@ -192,8 +192,8 @@ export default {
 
 /* 设置photo的尺寸和背景 */
 .photo-list{
- display: flex;
- justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 /* photo-item的尺寸 */
 .photo-item{
