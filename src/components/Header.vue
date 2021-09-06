@@ -45,19 +45,9 @@
     <div class="header-wrapper">
       <a href="" class="logo"><img src="../assets/logo-mi2.png" alt="" /></a>
       <ul class="nav-list">
-        <li v-for="item in asideList" :key="item" class="nav-items">
+        <li v-for="item in nav2list" :key="item" class="nav-items">
           <a :href="item.link">{{ item.label }}</a>
         </li>
-<!--         <li class="nav-items"><a href="http://">小米手机</a></li>
-        <li class="nav-items"><a href="http://">Redmi红米</a></li>
-        <li class="nav-items"><a href="http://">电视</a></li>
-        <li class="nav-items"><a href="http://">笔记本</a></li>
-        <li class="nav-items"><a href="http://">平板</a></li>
-        <li class="nav-items"><a href="http://">家电</a></li>
-        <li class="nav-items"><a href="http://">路由器</a></li>
-        <li class="nav-items"><a href="http://">智能硬件</a></li>
-        <li class="nav-items"><a href="http://">服务</a></li>
-        <li class="nav-items"><a href="http://">社区</a></li> -->
       </ul>
 
       <div class="header-search">
@@ -86,7 +76,7 @@ export default {
         { label: "资质证照", link: "#" },
         { label: "协议规则", link: "#" },
       ],
-      asideList: [
+      nav2list: [
         {label: "小米手机", link: "#" },
         {label: "Redmi红米", link: "#" },
         {label: "电视", link: "#" },
@@ -143,6 +133,7 @@ export default {
 .topbar--left {
   height: 40px;
   display: flex;
+  text-align: center;
 }
 /* 设置下拉菜单 */
 .topbar--left .download,

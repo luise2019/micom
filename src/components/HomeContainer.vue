@@ -7,48 +7,18 @@
       </div>
       <div class="aside-bar">
         <ul class="aside-list">
-          <li class="side-item">
-            <a href="http://">手机<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">电视<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">笔记本&nbsp;平板<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">家电<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">出行&nbsp;穿戴<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">智能&nbsp;路由器<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">电源&nbsp;配件<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">健康&nbsp;儿童<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">耳机&nbsp;音箱<span class="fa fa-angle-right"></span></a>
-          </li>
-          <li class="side-item">
-            <a href="http://">生活&nbsp;箱包<span class="fa fa-angle-right"></span></a>
-          </li>
+          <li v-for="item in templatelist" :key="item" class="side-item">
+          <a :href="item.link"><span :class="item.span"></span>{{ item.label }}</a>
+        </li>
         </ul>
       </div>
     </div>
     <div class="shortcut">
       <div class="short-ser">
         <ul class="ser-list">
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>小米秒杀</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>企业团购</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>F码通道</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>米粉卡</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>以旧换新</a></li>
-          <li class="list-item"><a href="http://"><span class="fa fa-clock-o"></span>话费充值</a></li>
+          <li v-for="item in shortcutlist" :key="item" class="list-item">
+          <a :href="item.link"><span :class="item.span"></span>{{ item.label }}</a>
+        </li>
         </ul>
       </div>
       <div class="photo">
@@ -74,6 +44,30 @@
 export default {
   name: "HomeContainer",
   props: {},
+  data() {
+    return {
+      templatelist:[
+        {label:"手机",link: "#",span:"fa fa-angle-right"},
+        {label:"电视",link: "#",span:"fa fa-angle-right"},
+        {label:"笔记本 平板",link: "#",span:"fa fa-angle-right"},
+        {label:"家电",link: "#",span:"fa fa-angle-right"},
+        {label:"出行 穿戴",link: "#",span:"fa fa-angle-right"},
+        {label:"智能 路由器",link: "#",span:"fa fa-angle-right"},
+        {label:"电源 配件",link: "#",span:"fa fa-angle-right"},
+        {label:"健康 儿童",link: "#",span:"fa fa-angle-right"},
+        {label:"耳机 音箱",link: "#",span:"fa fa-angle-right"},
+        {label:"生活 箱包",link: "#",span:"fa fa-angle-right"},
+        ],
+      shortcutlist:[
+        {label:"小米秒杀",link: "#",span:"fa fa-clock-o"},
+        {label:"企业团购",link: "#",span:"fa fa-clock-o"},
+        {label:"F码通道",link: "#",span:"fa fa-clock-o"},
+        {label:"米粉卡",link: "#",span:"fa fa-clock-o"},
+        {label:"以旧换新",link: "#",span:"fa fa-clock-o"},
+        {label:"话费充值",link: "#",span:"fa fa-clock-o"},
+      ],
+    };
+  }
 };
 </script>
 
